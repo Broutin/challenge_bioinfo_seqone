@@ -1,0 +1,22 @@
+Pour le challenge bioinfo, voila le projet que je te propose :
+
+    Consigne
+    L'objectif est d'écrire un programme qui en prend en input un fichier BAM, le génome de référence (FASTA) et qui calcul le ratio de mismatch. Le ratio de mismatch est définit de la façon suivante :  Nombre de bp alignées et identique à la référence / Nombre de bp alignées sur la référence.
+
+    Le nombre de bases alignées sur la référence corresponds à l'opérateur M du cigar string, pour le nombre de bases alignées et identiques à la référence il faut regarder sur les régions qui sont en match (M) si la séquence du reads est égale à la référence ou non. Voir la documentation du format SAM/BAM pour plus de détails.
+
+    Implémentation
+    Idéalement on aimerait que tu réalise l'implémentation dans le langage Nim, c'est un (relativement nouveau) langage compilé (un peu comme Rust), qui à une syntaxe proche de Python, qui dispose d'un garbage collector et qui se compile en C. Donc rapide à écrire et avec de très bonnes performances. Il existe une librairie (hts-nim), qui permet notamment de lire et d'écrire des fichier BAM et aussi de faire des requêtes sur un fichier FASTA indexé. Sur le repository Github du projet tu peux trouver la documentation et des exemples de codes. Sur le blog de brentp (l'auteur de la lib) il y a quelques posts consacrés à hts-nim : https://brentp.github.io/post/nim-hts-example/
+
+    Si tu ne te sens pas d'apprendre ce nouveau langage, une implémentation en Python est également envisageable (en utilisant la librairie pysam).
+
+    Bonus
+    Sortir en output un fichier BAM modifié qui utilise les encodages "=" et "X" du cigar au lieu du "M" (for doc SAM/BAM).
+
+    Temps et partage de code
+    L'idée est de réaliser ce projet en max 1 journée, donc je te laisse voir entre l'implémentation Nim et Python, Nim étant à privilégié dans la mesure de faisabilité sur le temps impartit. Je te propose de créé un repository Github pour nous partager le code du mini-projet.
+
+    Resources
+    - Fichier BAM de test : https://we.tl/t-rRq0TIv9qx
+    - Génome de référence (FASTA) : ftp://ftp.ncbi.nlm.nih.gov/1000genomes/ftp/technical/reference/human_g1k_v37.fasta.gz
+
